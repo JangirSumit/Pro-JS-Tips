@@ -39,3 +39,47 @@ let i = 0;
 while (i < 1000000) { i++ }
 console.timeEnd('Process')
 //Process: 4.166ms
+
+
+//5. Conditional logging : Will print in console only if first argument is false
+console.assert(1 == 2, 'Hello');
+//Assertion failed: Hello 
+console.assert(1 == 1, 'Hello')
+// No Logging
+
+
+//6. Count number of times console.count() is called inside a loop
+for (i = 0; i < 10; i++) {
+    console.count();
+}
+/*
+default: 1
+default: 2
+default: 3
+default: 4
+default: 5
+default: 6
+default: 7
+default: 8
+default: 9
+default: 10
+*/
+
+
+//7.  Grouping
+/*
+The console.group() method indicates the start of a message group.
+All messages will from now on be written inside this group.
+Tip: Use the console.groupEnd() method to end the group.
+Tip: Use the console.groupCollapsed() method to hide the message group (collapsed by default).
+*/
+console.log("Hello world!");
+console.group();
+console.log("Hello again, this time inside a group!");
+console.groupEnd();
+console.log("and we are back.");
+/*
+Hello world!
+  Hello again, this time inside a group!
+and we are back.
+*/
