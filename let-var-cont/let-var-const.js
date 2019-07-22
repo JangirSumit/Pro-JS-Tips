@@ -31,6 +31,12 @@ console.log(baz);
 //30
 //Uncaught TypeError: Assignment to constant variable.
 
+//Change values of object
+const emp = { name: "foo", age: 30 }
+console.log(emp);
+emp.age = 35;
+console.log(emp);
+
 //Conclusion : 
 //1. We can not redeclare the let and const variables
 //2. We can re assign the value in let but can not in const.
