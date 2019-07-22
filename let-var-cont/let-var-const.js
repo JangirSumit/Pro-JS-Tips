@@ -9,7 +9,7 @@ console.log(baz);
 //20
 //30
 
-//We can not redeclare let and const with the same name. E.g.-
+//We can not redeclare let and const with the same name, but can do in var E.g.-
 let foo = 20;
 console.log(foo);
 var bar = 30;
@@ -20,7 +20,7 @@ console.log(baz);
 //30
 //Error : Uncaught SyntaxError: Identifier 'baz' has already been declared
 
-//We can not reassign the value of const variables. E.g.-
+//We can not reassign the value of const variables, but can do in let and var. E.g.-
 foo = 20;
 console.log(foo);
 bar = 30;
@@ -74,8 +74,12 @@ function func1() {
         const y = 20;
     }
     console.log(x);
-    console.log(x);
+    console.log(y);
 }
+
+func1();
+//ReferenceError: x is not defined
+//ReferenceError: y is not defined
 
 //Example 2: loops
 function func2() {
@@ -85,7 +89,7 @@ function func2() {
 }
 
 func2();
-//Error : Uncaught SyntaxError: Identifier 'foo' has already been declared
+//ReferenceError: index is not defined
 
 
 //3. Hoisting
