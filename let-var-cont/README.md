@@ -1,4 +1,4 @@
-1. Declaration
+<b>1. Declaration</b>
 ```
 let foo = 10;
 console.log(foo);
@@ -24,7 +24,7 @@ console.log(baz);
 //Error : Uncaught SyntaxError: Identifier 'baz' has already been declared
 ```
 
-We can not reassign the value of const variables but can do in var and let. E.g.-
+We can not reassign the value in const variables but can do in var and let. E.g.-
 ```
 foo = 20;
 console.log(foo);
@@ -37,7 +37,7 @@ console.log(baz);
 //Uncaught TypeError: Assignment to constant variable.
 ```
 
-But we can change values of const object
+But we can change properties of const objects
 ```
 const emp = { name: "foo", age: 30 }
 console.log(emp);//30
@@ -48,10 +48,10 @@ console.log(emp);//35
 Conclusion : 
 - We can not redeclare the let and const variables with the same name.
 - We can re assign the value in let and var but can not in const.
-- We can change the values of const, var and let objects.
+- We can change the properties of const, var and let objects.
 
 
-2. Scope<br/>
+<b>2. Scope</b><br/>
 scope of var is global and accessible through out the functions E.g.-<br/>
 Example 1: if-else
 ```
@@ -87,7 +87,7 @@ function func1() {
         const y = 20;
     }
     console.log(x);
-    console.log(x);
+    console.log(y);
 }
 
 func1()
@@ -108,7 +108,7 @@ func2();
 ```
 
 
-3. Hoisting<br/>
+<b>3. Hoisting</b><br/>
 All declarations (function, var, let, const and class) are hoisted in JavaScript, 
 while the var declarations are initialized with undefined, 
 but let and const declarations remain uninitialized. E.g.-<br/>
@@ -135,7 +135,7 @@ const const_x = 10;
 //ReferenceError: const_x is not defined
 ```
 
-4. Initialization<br/>
+<b>4. Initialization</b><br/>
 const is required to be initialized at the time declaration E.g.-
 ```
 const a;
@@ -157,7 +157,7 @@ console.log(a);
 //10
 ```
 
-5. var variables can be found in window object. <br/>
+<b>5. var variables can be found in window object.</b><br/>
 Same is not valid for let and const
 ```
 var x = 10;
