@@ -20,7 +20,7 @@ console.log(baz);
 //30
 //Uncaught SyntaxError: Identifier 'baz' has already been declared
 
-//We can not reassign the value of const variables. E.g.-
+//We can not reassign the value in const variables. E.g.-
 foo = 20;
 console.log(foo);
 bar = 30;
@@ -40,7 +40,7 @@ console.log(emp);
 //Conclusion : 
 //1. We can not redeclare the let and const variables
 //2. We can re assign the value in let but can not in const.
-//3. We can change the values of const objects.
+//3. We can change the properties of const objects.
 
 
 //2. Scope
@@ -74,7 +74,7 @@ function func1() {
         const y = 20;
     }
     console.log(x);
-    console.log(x);
+    console.log(y);
 }
 
 func1()
