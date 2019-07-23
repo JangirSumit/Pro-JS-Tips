@@ -16,9 +16,9 @@ var bar = 30;
 console.log(bar);
 const baz = 40;
 console.log(baz);
-//Error : Uncaught SyntaxError: Identifier 'foo' has already been declared
+//Uncaught SyntaxError: Identifier 'foo' has already been declared
 //30
-//Error : Uncaught SyntaxError: Identifier 'baz' has already been declared
+//Uncaught SyntaxError: Identifier 'baz' has already been declared
 
 //We can not reassign the value of const variables. E.g.-
 foo = 20;
@@ -77,6 +77,10 @@ function func1() {
     console.log(x);
 }
 
+func1()
+//Uncaught ReferenceError: x is not defined
+//Uncaught ReferenceError: y is not defined
+
 //Example 2: loops
 function func2() {
     for (let index = 0; index < 10; index++) {
@@ -85,7 +89,7 @@ function func2() {
 }
 
 func2();
-//Error : Uncaught SyntaxError: Identifier 'foo' has already been declared
+//Uncaught ReferenceError: index is not defined
 
 
 //3. Hoisting
@@ -97,7 +101,7 @@ console.log(var_x);
 var var_x = 10;
 //undefined
 
-//because it is hoisted like this-
+//because var is hoisted like this-
 var var_x;
 console.log(var_x);
 var_x = 10;
@@ -130,7 +134,7 @@ console.log(a);
 //10
 
 
-//5. var variables can be found in windows objects. 
+//5. var variables can be found in window object. 
 //Same is not valid for let and const
 var x = 10;
 let y = 20;
