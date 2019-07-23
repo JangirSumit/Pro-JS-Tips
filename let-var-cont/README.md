@@ -40,19 +40,19 @@ console.log(baz);
 But we can change values of const object
 ```
 const emp = { name: "foo", age: 30 }
-console.log(emp);
+console.log(emp);//30
 emp.age = 35;
-console.log(emp);
+console.log(emp);//35
 ```
 
 Conclusion : 
-- We can not redeclare the let and const variables
+- We can not redeclare the let and const variables with the same name.
 - We can re assign the value in let and var but can not in const.
-- We can change the values of const objects.
+- We can change the values of const, var and let objects.
 
 
-2. Scope
-scope of var is global and accessible through out the functions E.g.-
+2. Scope<br/>
+scope of var is global and accessible through out the functions E.g.-<br/>
 Example 1: if-else
 ```
 function func1() {
@@ -78,7 +78,7 @@ func2();
 //10
 ```
 
-let and consts are block scoped. E.g.-
+Where as, let and consts are block scoped. E.g.-<br/>
 Example 1: if-else
 ```
 function func1() {
@@ -89,6 +89,10 @@ function func1() {
     console.log(x);
     console.log(x);
 }
+
+func1()
+//Uncaught ReferenceError: x is not defined
+//Uncaught ReferenceError: y is not defined
 ```
 
 Example 2: loops
@@ -100,21 +104,21 @@ function func2() {
 }
 
 func2();
-//Error : Uncaught SyntaxError: Identifier 'foo' has already been declared
+//Uncaught ReferenceError: index is not defined
 ```
 
 
-3. Hoisting
+3. Hoisting<br/>
 All declarations (function, var, let, const and class) are hoisted in JavaScript, 
 while the var declarations are initialized with undefined, 
-but let and const declarations remain uninitialized. E.g.-
+but let and const declarations remain uninitialized. E.g.-<br/>
 Example 1: var hoisting
 ```
 console.log(var_x);
 var var_x = 10;
 //undefined
 ```
-because it is hoisted like this-
+because var is hoisted like this-
 ```
 var var_x;
 console.log(var_x);
@@ -131,7 +135,7 @@ const const_x = 10;
 //ReferenceError: const_x is not defined
 ```
 
-4. Initialization
+4. Initialization<br/>
 const is required to be initialized at the time declaration E.g.-
 ```
 const a;
@@ -153,7 +157,7 @@ console.log(a);
 //10
 ```
 
-5. var variables can be found in windows objects. 
+5. var variables can be found in window object. <br/>
 Same is not valid for let and const
 ```
 var x = 10;
