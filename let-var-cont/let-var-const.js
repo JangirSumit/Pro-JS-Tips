@@ -16,11 +16,11 @@ var bar = 30;
 console.log(bar);
 const baz = 40;
 console.log(baz);
-//Error : Uncaught SyntaxError: Identifier 'foo' has already been declared
+//Uncaught SyntaxError: Identifier 'foo' has already been declared
 //30
-//Error : Uncaught SyntaxError: Identifier 'baz' has already been declared
+//Uncaught SyntaxError: Identifier 'baz' has already been declared
 
-//We can not reassign the value of const variables, but can do in let and var. E.g.-
+//We can not reassign the value in const variables. E.g.-
 foo = 20;
 console.log(foo);
 bar = 30;
@@ -40,7 +40,7 @@ console.log(emp);
 //Conclusion : 
 //1. We can not redeclare the let and const variables
 //2. We can re assign the value in let but can not in const.
-//3. We can change the values of const objects.
+//3. We can change the properties of const objects.
 
 
 //2. Scope
@@ -77,9 +77,9 @@ function func1() {
     console.log(y);
 }
 
-func1();
-//ReferenceError: x is not defined
-//ReferenceError: y is not defined
+func1()
+//Uncaught ReferenceError: x is not defined
+//Uncaught ReferenceError: y is not defined
 
 //Example 2: loops
 function func2() {
@@ -89,7 +89,7 @@ function func2() {
 }
 
 func2();
-//ReferenceError: index is not defined
+//Uncaught ReferenceError: index is not defined
 
 
 //3. Hoisting
@@ -101,7 +101,7 @@ console.log(var_x);
 var var_x = 10;
 //undefined
 
-//because it is hoisted like this-
+//because var is hoisted like this-
 var var_x;
 console.log(var_x);
 var_x = 10;
@@ -134,7 +134,7 @@ console.log(a);
 //10
 
 
-//5. var variables can be found in windows objects. 
+//5. var variables can be found in window object. 
 //Same is not valid for let and const
 var x = 10;
 let y = 20;
