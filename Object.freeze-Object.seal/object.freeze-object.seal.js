@@ -1,7 +1,7 @@
 'use strict';
 
 //1. Object.freeze()
-//It is method that doesn't allow us to add new properties to such objects,
+//It is a method that doesn't allow us to add new properties to such objects,
 //remove existing ones and change the current prototype of such object. For E.g.-
 const someObject = {
     a: 'some string',
@@ -13,9 +13,9 @@ const someObject = {
 
 Object.freeze(someObject);
 someObject.a = 'some other string';
-// Throws an error in strict mode
+//Throws an error in strict mode
 
-//An attempt to change the prop1 property will be unsuccessful and we will get the following error:
+//An attempt to change the 'a' property will be unsuccessful and we will get the following error:
 //Uncaught TypeError: Cannot assign to read only property 'a' of object ‘#<Object>’
 
 //But we can still change the property of this object if it is an inner object. For E.g.-
@@ -28,7 +28,7 @@ Object.freeze(someObject.c);
 someObject.c.x = 'will not be set';
 // Throws an error in strict mode
 
-//We can not change delete the properties of frozen objects. For E.g.-
+//We can not delete the properties of frozen objects. For E.g.-
 delete someObject.c
 console.log(someObject);
 // Throws an error in strict mode
