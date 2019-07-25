@@ -44,4 +44,25 @@ console.log(Object.isFrozen(someObject));
 
 //2. Object.seal()
 //It is quite similar to Object.freeze like we can’t add new properties, 
-//delete existing ones and every property becomes non - configurable but the major difference is, values of properties can be changed:
+//delete existing ones and every property becomes non - configurable 
+//but the major difference is that we can change values of properties:
+const toBeSealedObject = {
+    a: 'some string',
+    b: 5,
+    c: {
+        x: 'changeable'
+    }
+};
+
+Object.seal(toBeSealedObject);
+toBeSealedObject.a = 'some other string';
+//Will not throw any error and also property will be changed.
+
+//Lets try to add, delete existing property
+delete toBeSealedObject.a
+//Cannot delete property 'a' of #<Object>
+toBeSealedObject.d = 10;
+//Cannot add property 'd', object is not extensible
+
+//We can also check whether a object is sealed or not? For E.g.-
+console.log(Object.isFrozen(toBeSealedObject));
