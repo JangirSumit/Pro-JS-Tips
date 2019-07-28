@@ -17,7 +17,7 @@ console.log(items_of_objects.find((item) => item.name === 'c'));
 
 
 //2. filter()
-//filter method is used to filter out all elements(array) which 
+//filter() is used to filter out all elements(array) which 
 //matches the predicate conditions. For E.g.-
 items = [1, 2, 3, 4, 5, 5, 6];
 console.log(items.filter((item) => item == 5));
@@ -29,7 +29,6 @@ console.log(items.filter((item) => item == 0));
 //[]
 
 //like find(), filter() can be used for array of objects. For E.g.-
-//find() can be used for array of objects. For E.g.-
 items_of_objects = [{ name: 'a' }, { name: 'b' }, { name: 'c' }];
 console.log(items_of_objects.filter((item) => item.name === 'c'));
 [{ name: 'c' }]
