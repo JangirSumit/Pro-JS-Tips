@@ -7,3 +7,4 @@
 3. [for...in-for...of](https://github.com/JangirSumit/Pro-JS-Tips/tree/master/for...in-for...of)
 4. [Object.freeze()-Object.seal()](https://github.com/JangirSumit/Pro-JS-Tips/tree/master/Object.freeze-Object.seal)
 5. [find()-filter()](https://github.com/JangirSumit/Pro-JS-Tips/tree/master/find-filter)
+6. [Rest API Wrapper](https://github.com/JangirSumit/Pro-JS-Tips/tree/master/REST-API)
